@@ -15,6 +15,7 @@ function App({ name, age }: IProps): JSX.Element {
       Hello World, {name}, your age: {age}
       <Suspense fallback={<div>loading</div>}>
         <Text />
+        11
       </Suspense>
     </div>
   );
