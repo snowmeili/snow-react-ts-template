@@ -60,16 +60,12 @@ module.exports = {
       },
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10 * 1024,
-              name: '[name].[contenthash:8].[ext]',
-              outputPath: 'assets/images',
-            },
-          },
-        ],
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8*1024
+          }
+        }
       },
       {
         test: /\.(ttf|woff|woff2|eot|otf)$/,

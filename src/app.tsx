@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 
-import './style.scss'
-
+import './style.scss';
 const Text = React.lazy(() => import('Components/text'));
 
 interface IProps {
@@ -12,11 +11,12 @@ interface IProps {
 function App({ name, age }: IProps): JSX.Element {
   return (
     <div className="App">
+      qqq3333
       Hello World, {name}, your age: {age}
       <Suspense fallback={<div>loading</div>}>
         <Text />
-        11
       </Suspense>
+      <img src="../public/rose.jpg" />
     </div>
   );
 }

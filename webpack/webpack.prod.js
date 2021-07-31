@@ -13,6 +13,9 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
   mode: 'production',
   optimization: {
+    usedExports: true,
+    concatenateModules: true,
+    minimize: true,
     minimizer: [
       new TerserPlugin({
         extractComments: false,
